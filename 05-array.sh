@@ -7,4 +7,4 @@ echo "second word is: ${Language[1]}"
 echo "third word is: ${Language[2]}"
 echo "fourth word is: ${Language[3]}"
 
-echo "first word is: ${Language[@]}"
+echo "first all words are: ${Language[@]}"
