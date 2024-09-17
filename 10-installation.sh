@@ -12,7 +12,7 @@ fi
 
 dnf list installed git 
 
-fi [ $? -ne 0 ]
+if [ $? -ne 0 ]
 then
     echo "git installed, going to install it"
     dnf install git -y
