@@ -18,20 +18,20 @@ dnf list installed git
 
 VALIDATE $?
 
-if [ $? -ne 0 ]
-then
-    echo "git not installed, going to install it"
-    dnf install git -y
-    if [ $? -ne 0 ]
-    then 
-        echo "git installation not sucess..."
-        exit 1
-    else
-        echo "git installation is sucess"
-    fi
-else
-    echo "git is already installed, nothing to do.."
-fi
+# if [ $? -ne 0 ]
+# then
+#     echo "git not installed, going to install it"
+#     dnf install git -y
+#     if [ $? -ne 0 ]
+#     then 
+#         echo "git installation not sucess..."
+#         exit 1
+#     else
+#         echo "git installation is sucess"
+#     fi
+# else
+#     echo "git is already installed, nothing to do.."
+# fi
 
 # dnf list installed mysql
 
