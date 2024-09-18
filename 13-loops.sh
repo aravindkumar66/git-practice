@@ -4,7 +4,7 @@
 # #echo "User ID is: $USERID"
 
 CHECK_ROOT(){
-    if [ $USERID -NE 0 ]
+    if [ $USERID -ne 0 ]
     then
         echo "please run this script with root previliges"
         exit 1
