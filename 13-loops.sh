@@ -7,14 +7,15 @@ CHECK_ROOT(){
     IF [ $USERID -NE 0 ]
     then
         echo "please run this script with root previliges"
-        exit1
+        exit 1
+    fi
 }
 
 VALIDATE(){
     if [ $? -ne 0 ]
     then
          echo "$2 command is failed"
-         exit1
+         exit 1
     else
          echo "$2 command is.. sucess"
     fi 
