@@ -33,6 +33,6 @@ do
         dnf install $package -y
         VALIDATE $? "installing $package"
     else 
-        echo "mysql is already installed.. nothing to do"
+        echo "$package is already installed.. nothing to do"
     fi
 done
