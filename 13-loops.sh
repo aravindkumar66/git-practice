@@ -26,6 +26,13 @@ CHECK_ROOT
 
 for package in $@ # $@ all arguments passed
 do
-    echo $package 
-
+    dnf list installed $package
+    if [ $? -ne 0 ]
+    then 
+        echo "$package is not installed, going to install.."
+        dnf install $package -y
+        VALIDATE $? "installing $package"
+    else 
+        echo "mysql is already installed.. nothing to do"
+    fi
 done
