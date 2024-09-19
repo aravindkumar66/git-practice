@@ -16,7 +16,7 @@ Y="\e[33m"
 CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
-        echo -e "$R please run this script with root previliges $N" &>>$LOG_FILE
+        echo -e "$R please run this script with root previliges $N" | tee -a &>>$LOG_FILE
         exit 1
     fi
 }
@@ -24,10 +24,10 @@ CHECK_ROOT(){
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-         echo "$2 command is failed" &>>$LOG_FILE
+         echo "$2 command is failed" | tee -a &>>$LOG_FILE
          exit 1
     else
-         echo "$2 command is.. sucess" &>>$LOG_FILE
+         echo "$2 command is.. sucess" | tee -a &>>$LOG_FILE
     fi 
 
 }
@@ -37,7 +37,7 @@ USAGE(){
     exit 1
 }
 
-echo "script started executing at: $(date)" &>>$LOG_FILE
+echo "script started executing at: $(date)" | tee -a &>>$LOG_FILE
 
 CHECK_ROOT
 
